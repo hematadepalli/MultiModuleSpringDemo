@@ -1,0 +1,14 @@
+syntax="proto3";
+package com.sum;
+option java_package="com.example.add";
+option java_multiple_files = true;
+message AddRequest{
+  int32 a=1;
+  int32 b=2;
+}
+message AddResponse{
+  int32 result=1;
+}
+service AddService{
+  rpc Add(AddRequest) returns (AddResponse);
+}
